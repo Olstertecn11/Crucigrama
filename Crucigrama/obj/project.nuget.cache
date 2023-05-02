@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "OItn2jws6el1tOKL2Tu00mw7hkc7WJZHPzOvc1rBb3yT8xFim8j6E9r6mKgciOOPyavHfsv2d6ks71nqliV8Cw==",
+  "dgSpecHash": "2xm8wIH+KY9LMYxWDUmWDqQzTBGVb0xg+Av1CKQ4dqMjxHUPVVPBtLowseH6RtWux0wsunwEGebpGgZ1tMllNA==",
   "success": true,
   "projectFilePath": "C:\\Users\\olste\\Desktop\\Development\\work_space\\Crucigrama\\Crucigrama\\Crucigrama.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\olste\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
+  ],
   "logs": []
 }

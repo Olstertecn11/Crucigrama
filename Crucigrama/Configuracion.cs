@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -44,8 +45,11 @@ namespace Crucigrama
             this.seleccionarImagen(pic_2);
         }
 
+
+
         private void btn_guardar_Click(object sender, EventArgs e)
         {
+
             this.j1 = new Jugador(txt_j1.Text, pic_1.ImageLocation);
             this.j2 = new Jugador(txt_j2.Text, pic_2.ImageLocation);
             MessageBox.Show("Configuracion Guardada!");

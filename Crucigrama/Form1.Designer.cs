@@ -35,17 +35,17 @@
             txt7 = new TextBox();
             txt8 = new TextBox();
             txt9 = new TextBox();
-            textBox7 = new TextBox();
-            textBox8 = new TextBox();
-            textBox9 = new TextBox();
-            textBox10 = new TextBox();
-            textBox11 = new TextBox();
-            textBox12 = new TextBox();
+            txt22 = new TextBox();
+            txt21 = new TextBox();
+            txt20 = new TextBox();
+            txt19 = new TextBox();
+            txt18 = new TextBox();
+            txt17 = new TextBox();
             txt1 = new TextBox();
             txt4 = new TextBox();
             txt3 = new TextBox();
-            textBox16 = new TextBox();
-            textBox17 = new TextBox();
+            txt15 = new TextBox();
+            txt16 = new TextBox();
             txt10 = new TextBox();
             txt14 = new TextBox();
             txt13 = new TextBox();
@@ -60,6 +60,9 @@
             lbl_turno = new Label();
             lbl_tiempo = new Label();
             timer1 = new System.Windows.Forms.Timer(components);
+            label5 = new Label();
+            label6 = new Label();
+            label7 = new Label();
             panel_contenedor.SuspendLayout();
             SuspendLayout();
             // 
@@ -111,53 +114,53 @@
             txt9.Size = new Size(24, 23);
             txt9.TabIndex = 5;
             // 
-            // textBox7
+            // txt22
             // 
-            textBox7.Location = new Point(189, 288);
-            textBox7.Multiline = true;
-            textBox7.Name = "textBox7";
-            textBox7.Size = new Size(24, 23);
-            textBox7.TabIndex = 11;
+            txt22.Location = new Point(189, 288);
+            txt22.Multiline = true;
+            txt22.Name = "txt22";
+            txt22.Size = new Size(24, 23);
+            txt22.TabIndex = 11;
             // 
-            // textBox8
+            // txt21
             // 
-            textBox8.Location = new Point(189, 262);
-            textBox8.Multiline = true;
-            textBox8.Name = "textBox8";
-            textBox8.Size = new Size(24, 23);
-            textBox8.TabIndex = 10;
+            txt21.Location = new Point(189, 262);
+            txt21.Multiline = true;
+            txt21.Name = "txt21";
+            txt21.Size = new Size(24, 23);
+            txt21.TabIndex = 10;
             // 
-            // textBox9
+            // txt20
             // 
-            textBox9.Location = new Point(189, 237);
-            textBox9.Multiline = true;
-            textBox9.Name = "textBox9";
-            textBox9.Size = new Size(24, 23);
-            textBox9.TabIndex = 9;
+            txt20.Location = new Point(189, 237);
+            txt20.Multiline = true;
+            txt20.Name = "txt20";
+            txt20.Size = new Size(24, 23);
+            txt20.TabIndex = 9;
             // 
-            // textBox10
+            // txt19
             // 
-            textBox10.Location = new Point(189, 212);
-            textBox10.Multiline = true;
-            textBox10.Name = "textBox10";
-            textBox10.Size = new Size(24, 23);
-            textBox10.TabIndex = 8;
+            txt19.Location = new Point(189, 212);
+            txt19.Multiline = true;
+            txt19.Name = "txt19";
+            txt19.Size = new Size(24, 23);
+            txt19.TabIndex = 8;
             // 
-            // textBox11
+            // txt18
             // 
-            textBox11.Location = new Point(189, 187);
-            textBox11.Multiline = true;
-            textBox11.Name = "textBox11";
-            textBox11.Size = new Size(24, 23);
-            textBox11.TabIndex = 7;
+            txt18.Location = new Point(189, 187);
+            txt18.Multiline = true;
+            txt18.Name = "txt18";
+            txt18.Size = new Size(24, 23);
+            txt18.TabIndex = 7;
             // 
-            // textBox12
+            // txt17
             // 
-            textBox12.Location = new Point(189, 162);
-            textBox12.Multiline = true;
-            textBox12.Name = "textBox12";
-            textBox12.Size = new Size(24, 23);
-            textBox12.TabIndex = 6;
+            txt17.Location = new Point(189, 162);
+            txt17.Multiline = true;
+            txt17.Name = "txt17";
+            txt17.Size = new Size(24, 23);
+            txt17.TabIndex = 6;
             // 
             // txt1
             // 
@@ -184,21 +187,21 @@
             txt3.Size = new Size(24, 23);
             txt3.TabIndex = 14;
             // 
-            // textBox16
+            // txt15
             // 
-            textBox16.Location = new Point(117, 162);
-            textBox16.Multiline = true;
-            textBox16.Name = "textBox16";
-            textBox16.Size = new Size(24, 23);
-            textBox16.TabIndex = 15;
+            txt15.Location = new Point(117, 162);
+            txt15.Multiline = true;
+            txt15.Name = "txt15";
+            txt15.Size = new Size(24, 23);
+            txt15.TabIndex = 15;
             // 
-            // textBox17
+            // txt16
             // 
-            textBox17.Location = new Point(143, 162);
-            textBox17.Multiline = true;
-            textBox17.Name = "textBox17";
-            textBox17.Size = new Size(24, 23);
-            textBox17.TabIndex = 16;
+            txt16.Location = new Point(143, 162);
+            txt16.Multiline = true;
+            txt16.Name = "txt16";
+            txt16.Size = new Size(24, 23);
+            txt16.TabIndex = 16;
             // 
             // txt10
             // 
@@ -261,6 +264,9 @@
             // panel_contenedor
             // 
             panel_contenedor.BackColor = SystemColors.InactiveCaption;
+            panel_contenedor.Controls.Add(label7);
+            panel_contenedor.Controls.Add(label6);
+            panel_contenedor.Controls.Add(label5);
             panel_contenedor.Controls.Add(txt1);
             panel_contenedor.Controls.Add(label2);
             panel_contenedor.Controls.Add(txt2);
@@ -275,16 +281,16 @@
             panel_contenedor.Controls.Add(txt12);
             panel_contenedor.Controls.Add(txt9);
             panel_contenedor.Controls.Add(txt10);
-            panel_contenedor.Controls.Add(textBox12);
-            panel_contenedor.Controls.Add(textBox17);
-            panel_contenedor.Controls.Add(textBox11);
-            panel_contenedor.Controls.Add(textBox16);
-            panel_contenedor.Controls.Add(textBox10);
+            panel_contenedor.Controls.Add(txt17);
+            panel_contenedor.Controls.Add(txt16);
+            panel_contenedor.Controls.Add(txt18);
+            panel_contenedor.Controls.Add(txt15);
+            panel_contenedor.Controls.Add(txt19);
             panel_contenedor.Controls.Add(txt3);
-            panel_contenedor.Controls.Add(textBox9);
+            panel_contenedor.Controls.Add(txt20);
             panel_contenedor.Controls.Add(txt4);
-            panel_contenedor.Controls.Add(textBox8);
-            panel_contenedor.Controls.Add(textBox7);
+            panel_contenedor.Controls.Add(txt21);
+            panel_contenedor.Controls.Add(txt22);
             panel_contenedor.Location = new Point(42, 50);
             panel_contenedor.Name = "panel_contenedor";
             panel_contenedor.Size = new Size(401, 339);
@@ -346,6 +352,33 @@
             timer1.Interval = 1000;
             timer1.Tick += timer1_Tick;
             // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Location = new Point(119, 94);
+            label5.Name = "label5";
+            label5.Size = new Size(13, 15);
+            label5.TabIndex = 24;
+            label5.Text = "2";
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Location = new Point(98, 165);
+            label6.Name = "label6";
+            label6.Size = new Size(13, 15);
+            label6.TabIndex = 25;
+            label6.Text = "3";
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Location = new Point(200, 144);
+            label7.Name = "label7";
+            label7.Size = new Size(13, 15);
+            label7.TabIndex = 26;
+            label7.Text = "2";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -373,17 +406,17 @@
         private TextBox txt7;
         private TextBox txt8;
         private TextBox txt9;
-        private TextBox textBox7;
-        private TextBox textBox8;
-        private TextBox textBox9;
-        private TextBox textBox10;
-        private TextBox textBox11;
-        private TextBox textBox12;
+        private TextBox txt22;
+        private TextBox txt21;
+        private TextBox txt20;
+        private TextBox txt19;
+        private TextBox txt18;
+        private TextBox txt17;
         private TextBox txt1;
         private TextBox txt4;
         private TextBox txt3;
-        private TextBox textBox16;
-        private TextBox textBox17;
+        private TextBox txt15;
+        private TextBox txt16;
         private TextBox txt10;
         private TextBox txt14;
         private TextBox txt13;
@@ -398,5 +431,8 @@
         private Label lbl_turno;
         private Label lbl_tiempo;
         private System.Windows.Forms.Timer timer1;
+        private Label label7;
+        private Label label6;
+        private Label label5;
     }
 }

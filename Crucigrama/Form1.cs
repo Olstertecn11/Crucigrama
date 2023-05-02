@@ -1,3 +1,5 @@
+using Newtonsoft.Json;
+
 namespace Crucigrama
 {
     public partial class Form1 : Form
@@ -16,6 +18,7 @@ namespace Crucigrama
             this.crearPalabras();
             this.configurarEvento();
             this.escribirCorrectas();
+            this.configurar();
         }
 
         public void configurarEvento()
@@ -29,11 +32,51 @@ namespace Crucigrama
             }
         }
 
+        public void configurar()
+        {
+            Config myConf = this.readJson();
+            if(myConf!= null)
+            {
+                foreach(Vertical vert in myConf.verticales)
+                {
+                    foreach(Palabra palabra in palabras)
+                    {
+                        if(palabra.id == Convert.ToInt32(vert.id))
+                        {
+                            palabra.texto = vert.val;
+                        }
+                    }
+                }
+
+                foreach(Horizontal hori in myConf.horizontales)
+                {
+                    foreach(Palabra palabra in palabras)
+                    {
+                        if(palabra.id == Convert.ToInt32(hori.id))
+                        {
+                            palabra.texto = hori.val;
+                        }
+                    }
+                }
+            }
+        }
+
+        Config readJson()
+        {
+            using (StreamReader r = new StreamReader("config.json"))
+            {
+                string json = r.ReadToEnd();
+                Config conf = JsonConvert.DeserializeObject<Config>(json);
+                return conf;
+            }
+            return null;
+        }
+
         public void crearPalabras()
         {
-            this.palabras.Add(new Palabra("rana", new List<TextBox> { txt1, txt2, txt3, txt4 }));
-            this.palabras.Add(new Palabra("aguila", new List<TextBox> { txt2, txt5, txt6, txt7, txt8, txt9 }));
-            this.palabras.Add(new Palabra("buitre", new List<TextBox> { txt10, txt6, txt11, txt12, txt13, txt14 }));
+            this.palabras.Add(new Palabra(1, "h", "rana", new List<TextBox> { txt1, txt2, txt3, txt4 }));
+            this.palabras.Add(new Palabra(1, "v", "aguila", new List<TextBox> { txt2, txt5, txt6, txt7, txt8, txt9 }));
+            this.palabras.Add(new Palabra(2, "h", "buitre", new List<TextBox> { txt10, txt6, txt11, txt12, txt13, txt14 }));
         }
 
 

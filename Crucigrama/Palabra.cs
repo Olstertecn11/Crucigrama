@@ -8,11 +8,15 @@ namespace Crucigrama
 {
     public class Palabra
     {
+        public int id;
+        public string pos;
         public string texto;
         public List<TextBox> cajas;
         public Boolean llena;
-        public Palabra(string c, List<TextBox> arr)
+        public Palabra(int id, string pos, string c, List<TextBox> arr)
         {
+            this.pos = pos;
+            this.id = id;
             this.texto = c;
             this.cajas = new List<TextBox>();
             this.cajas = arr;

@@ -1,0 +1,20 @@
+
+  {
+    "verticales": [
+      {
+        "id": 1,
+        "val": "rana"
+      },
+      {
+        "id": "2",
+        "val":  "aguila"
+      }
+    ],
+    "horizontales": [
+      {
+        "id": "1",
+        "val":  "buitre"
+      }
+    ]
+  }
+

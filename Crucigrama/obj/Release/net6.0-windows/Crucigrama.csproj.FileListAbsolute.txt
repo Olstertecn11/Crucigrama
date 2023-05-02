@@ -18,3 +18,5 @@ C:\Users\olste\Desktop\Development\work_space\Crucigrama\Crucigrama\obj\Release\
 C:\Users\olste\Desktop\Development\work_space\Crucigrama\Crucigrama\obj\Release\net6.0-windows\Crucigrama.pdb
 C:\Users\olste\Desktop\Development\work_space\Crucigrama\Crucigrama\obj\Release\net6.0-windows\Crucigrama.genruntimeconfig.cache
 C:\Users\olste\Desktop\Development\work_space\Crucigrama\Crucigrama\obj\Release\net6.0-windows\ref\Crucigrama.dll
+C:\Users\olste\Desktop\Development\work_space\Crucigrama\Crucigrama\bin\Release\net6.0-windows\Newtonsoft.Json.dll
+C:\Users\olste\Desktop\Development\work_space\Crucigrama\Crucigrama\obj\Release\net6.0-windows\Crucigrama.csproj.CopyComplete
