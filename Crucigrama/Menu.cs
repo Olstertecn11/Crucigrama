@@ -16,6 +16,8 @@ namespace Crucigrama
         public Jugador jugador2;
         public Menu()
         {
+            this.jugador1 = new Jugador("", "");
+            this.jugador2 = new Jugador("", "");
             InitializeComponent();
         }
 

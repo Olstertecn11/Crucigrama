@@ -26,10 +26,10 @@ namespace Crucigrama
         }
         private void btn_pic_1_Click(object sender, EventArgs e)
         {
-            this.seleccionarImagen(pic_1);
+            this.seleccionarImagen(pic_1, 1);
         }
 
-        public void seleccionarImagen(PictureBox pic)
+        public void seleccionarImagen(PictureBox pic, int id)
         {
             OpenFileDialog ofd = new OpenFileDialog();
 
@@ -37,21 +37,20 @@ namespace Crucigrama
             {
                 string img = ofd.FileName;
                 pic.Image = Image.FromFile(img);
+                if (id == 2) this.j2.imagen = img;
+                if (id == 1)this.j1.imagen = img;
             }
         }
 
         private void btn_pic_2_Click(object sender, EventArgs e)
         {
-            this.seleccionarImagen(pic_2);
+            this.seleccionarImagen(pic_2, 2);
         }
-
-
 
         private void btn_guardar_Click(object sender, EventArgs e)
         {
-
-            this.j1 = new Jugador(txt_j1.Text, pic_1.ImageLocation);
-            this.j2 = new Jugador(txt_j2.Text, pic_2.ImageLocation);
+            this.j1.nombre = txt_j1.Text;
+            this.j2.nombre = txt_j2.Text;
             MessageBox.Show("Configuracion Guardada!");
             this.Close();
         }

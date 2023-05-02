@@ -1,4 +1,5 @@
 using Newtonsoft.Json;
+using System.Runtime.CompilerServices;
 
 namespace Crucigrama
 {
@@ -35,29 +36,37 @@ namespace Crucigrama
         public void configurar()
         {
             Config myConf = this.readJson();
-            if(myConf!= null)
+
+            if (myConf != null)
             {
-                foreach(Vertical vert in myConf.verticales)
+                List<Palabra> p_v = this.palabras.FindAll(el => el.pos.Equals("v"));
+                List<Palabra> p_h = this.palabras.FindAll(el => el.pos.Equals("h"));
+
+                foreach (Vertical vert in myConf.verticales)
                 {
-                    foreach(Palabra palabra in palabras)
+                    foreach (Palabra pal in p_v)
                     {
-                        if(palabra.id == Convert.ToInt32(vert.id))
+                        if (pal.id == Convert.ToInt32(vert.id))
                         {
-                            palabra.texto = vert.val;
+                            pal.texto = vert.val;
                         }
                     }
                 }
 
-                foreach(Horizontal hori in myConf.horizontales)
+                foreach (Horizontal hori in myConf.horizontales)
                 {
-                    foreach(Palabra palabra in palabras)
+                    foreach (Palabra pal in p_h)
                     {
-                        if(palabra.id == Convert.ToInt32(hori.id))
+                        if (pal.id == Convert.ToInt32(hori.id))
                         {
-                            palabra.texto = hori.val;
+                            pal.texto = hori.val;
                         }
                     }
                 }
+            }
+            else
+            {
+                MessageBox.Show("Null");
             }
         }
 
@@ -77,6 +86,7 @@ namespace Crucigrama
             this.palabras.Add(new Palabra(1, "h", "rana", new List<TextBox> { txt1, txt2, txt3, txt4 }));
             this.palabras.Add(new Palabra(1, "v", "aguila", new List<TextBox> { txt2, txt5, txt6, txt7, txt8, txt9 }));
             this.palabras.Add(new Palabra(2, "h", "buitre", new List<TextBox> { txt10, txt6, txt11, txt12, txt13, txt14 }));
+            this.palabras.Add(new Palabra(2, "v", "babosa", new List<TextBox> { txt17, txt18, txt19, txt20, txt21, txt22 }));
         }
 
 
@@ -86,10 +96,12 @@ namespace Crucigrama
             if (this.turno)
             {
                 lbl_turno.Text = j1.nombre;
+                picture.Image = Image.FromFile(j1.imagen);
             }
             else
             {
                 lbl_turno.Text = j2.nombre;
+                picture.Image = Image.FromFile(j2.imagen);
             }
         }
         public void analizar()
@@ -100,7 +112,7 @@ namespace Crucigrama
                 {
                     palabra.llena = true;
                     this.correctas++;
-                    this.turno = !this.turno;
+                    //this.turno = !this.turno;
                 }
             }
             this.escribirCorrectas();
@@ -124,7 +136,19 @@ namespace Crucigrama
         private void timer1_Tick(object sender, EventArgs e)
         {
             this.segundos++;
+            if (this.segundos % 30 == 0)
+            {
+                MessageBox.Show("tiempo acabado...");
+                this.turno = !this.turno;
+                this.escribirCorrectas();
+            }
             lbl_tiempo.Text = this.segundos.ToString();
+        }
+
+        private void btn_siguiente_Click(object sender, EventArgs e)
+        {
+            this.turno = !this.turno;
+            this.escribirCorrectas();
         }
     }
 }

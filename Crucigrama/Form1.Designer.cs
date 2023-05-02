@@ -54,16 +54,20 @@
             label1 = new Label();
             label2 = new Label();
             panel_contenedor = new Panel();
+            label7 = new Label();
+            label6 = new Label();
+            label5 = new Label();
             label3 = new Label();
             lbl_correctas = new Label();
             label4 = new Label();
             lbl_turno = new Label();
             lbl_tiempo = new Label();
             timer1 = new System.Windows.Forms.Timer(components);
-            label5 = new Label();
-            label6 = new Label();
-            label7 = new Label();
+            label8 = new Label();
+            picture = new PictureBox();
+            btn_siguiente = new Button();
             panel_contenedor.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)picture).BeginInit();
             SuspendLayout();
             // 
             // txt2
@@ -296,70 +300,14 @@
             panel_contenedor.Size = new Size(401, 339);
             panel_contenedor.TabIndex = 24;
             // 
-            // label3
+            // label7
             // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
-            label3.Location = new Point(602, 58);
-            label3.Name = "label3";
-            label3.Size = new Size(113, 32);
-            label3.TabIndex = 25;
-            label3.Text = "Correctas";
-            // 
-            // lbl_correctas
-            // 
-            lbl_correctas.AutoSize = true;
-            lbl_correctas.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
-            lbl_correctas.Location = new Point(738, 58);
-            lbl_correctas.Name = "lbl_correctas";
-            lbl_correctas.Size = new Size(27, 32);
-            lbl_correctas.TabIndex = 26;
-            lbl_correctas.Text = "0";
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
-            label4.Location = new Point(602, 136);
-            label4.Name = "label4";
-            label4.Size = new Size(77, 32);
-            label4.TabIndex = 27;
-            label4.Text = "Turno";
-            // 
-            // lbl_turno
-            // 
-            lbl_turno.AutoSize = true;
-            lbl_turno.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
-            lbl_turno.Location = new Point(721, 136);
-            lbl_turno.Name = "lbl_turno";
-            lbl_turno.Size = new Size(40, 32);
-            lbl_turno.TabIndex = 28;
-            lbl_turno.Text = "lol";
-            // 
-            // lbl_tiempo
-            // 
-            lbl_tiempo.AutoSize = true;
-            lbl_tiempo.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
-            lbl_tiempo.Location = new Point(606, 226);
-            lbl_tiempo.Name = "lbl_tiempo";
-            lbl_tiempo.Size = new Size(27, 32);
-            lbl_tiempo.TabIndex = 29;
-            lbl_tiempo.Text = "0";
-            // 
-            // timer1
-            // 
-            timer1.Enabled = true;
-            timer1.Interval = 1000;
-            timer1.Tick += timer1_Tick;
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Location = new Point(119, 94);
-            label5.Name = "label5";
-            label5.Size = new Size(13, 15);
-            label5.TabIndex = 24;
-            label5.Text = "2";
+            label7.AutoSize = true;
+            label7.Location = new Point(200, 144);
+            label7.Name = "label7";
+            label7.Size = new Size(13, 15);
+            label7.TabIndex = 26;
+            label7.Text = "2";
             // 
             // label6
             // 
@@ -370,20 +318,113 @@
             label6.TabIndex = 25;
             label6.Text = "3";
             // 
-            // label7
+            // label5
             // 
-            label7.AutoSize = true;
-            label7.Location = new Point(200, 144);
-            label7.Name = "label7";
-            label7.Size = new Size(13, 15);
-            label7.TabIndex = 26;
-            label7.Text = "2";
+            label5.AutoSize = true;
+            label5.Location = new Point(119, 94);
+            label5.Name = "label5";
+            label5.Size = new Size(13, 15);
+            label5.TabIndex = 24;
+            label5.Text = "2";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            label3.Location = new Point(561, 9);
+            label3.Name = "label3";
+            label3.Size = new Size(69, 17);
+            label3.TabIndex = 25;
+            label3.Text = "Correctas:";
+            // 
+            // lbl_correctas
+            // 
+            lbl_correctas.AutoSize = true;
+            lbl_correctas.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            lbl_correctas.Location = new Point(640, 9);
+            lbl_correctas.Name = "lbl_correctas";
+            lbl_correctas.Size = new Size(15, 17);
+            lbl_correctas.TabIndex = 26;
+            lbl_correctas.Text = "0";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label4.Location = new Point(640, 68);
+            label4.Name = "label4";
+            label4.Size = new Size(85, 21);
+            label4.TabIndex = 27;
+            label4.Text = "Turno de: ";
+            // 
+            // lbl_turno
+            // 
+            lbl_turno.AutoSize = true;
+            lbl_turno.Font = new Font("Segoe UI", 14.25F, FontStyle.Italic, GraphicsUnit.Point);
+            lbl_turno.Location = new Point(729, 68);
+            lbl_turno.Name = "lbl_turno";
+            lbl_turno.Size = new Size(32, 25);
+            lbl_turno.TabIndex = 28;
+            lbl_turno.Text = "lol";
+            // 
+            // lbl_tiempo
+            // 
+            lbl_tiempo.AutoSize = true;
+            lbl_tiempo.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lbl_tiempo.Location = new Point(851, 9);
+            lbl_tiempo.Name = "lbl_tiempo";
+            lbl_tiempo.Size = new Size(19, 21);
+            lbl_tiempo.TabIndex = 29;
+            lbl_tiempo.Text = "0";
+            // 
+            // timer1
+            // 
+            timer1.Enabled = true;
+            timer1.Interval = 1000;
+            timer1.Tick += timer1_Tick;
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            label8.Location = new Point(781, 11);
+            label8.Name = "label8";
+            label8.Size = new Size(59, 17);
+            label8.TabIndex = 30;
+            label8.Text = "Tiempo:";
+            // 
+            // picture
+            // 
+            picture.Location = new Point(617, 122);
+            picture.Name = "picture";
+            picture.Size = new Size(189, 174);
+            picture.SizeMode = PictureBoxSizeMode.Zoom;
+            picture.TabIndex = 31;
+            picture.TabStop = false;
+            // 
+            // btn_siguiente
+            // 
+            btn_siguiente.BackColor = Color.Transparent;
+            btn_siguiente.FlatAppearance.BorderSize = 0;
+            btn_siguiente.FlatStyle = FlatStyle.Flat;
+            btn_siguiente.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            btn_siguiente.ForeColor = SystemColors.ButtonHighlight;
+            btn_siguiente.Image = Properties.Resources.arrow;
+            btn_siguiente.Location = new Point(831, 207);
+            btn_siguiente.Name = "btn_siguiente";
+            btn_siguiente.Size = new Size(57, 28);
+            btn_siguiente.TabIndex = 32;
+            btn_siguiente.UseVisualStyleBackColor = false;
+            btn_siguiente.Click += btn_siguiente_Click;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(928, 449);
+            Controls.Add(btn_siguiente);
+            Controls.Add(picture);
+            Controls.Add(label8);
             Controls.Add(lbl_tiempo);
             Controls.Add(lbl_turno);
             Controls.Add(label4);
@@ -394,6 +435,7 @@
             Text = "Form1";
             panel_contenedor.ResumeLayout(false);
             panel_contenedor.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)picture).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -434,5 +476,8 @@
         private Label label7;
         private Label label6;
         private Label label5;
+        private Label label8;
+        private PictureBox picture;
+        private Button btn_siguiente;
     }
 }
