@@ -63,11 +63,17 @@
             lbl_turno = new Label();
             lbl_tiempo = new Label();
             timer1 = new System.Windows.Forms.Timer(components);
+<<<<<<< HEAD
             label8 = new Label();
             picture = new PictureBox();
             btn_siguiente = new Button();
             lbl_llenas = new Label();
             label10 = new Label();
+=======
+            label5 = new Label();
+            label6 = new Label();
+            label7 = new Label();
+>>>>>>> 497ed2f (adding config)
             panel_contenedor.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)picture).BeginInit();
             SuspendLayout();
@@ -385,6 +391,7 @@
             timer1.Interval = 1000;
             timer1.Tick += timer1_Tick;
             // 
+<<<<<<< HEAD
             // label8
             // 
             label8.AutoSize = true;
@@ -438,6 +445,34 @@
             label10.Size = new Size(51, 17);
             label10.TabIndex = 33;
             label10.Text = "Llenas:";
+=======
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Location = new Point(119, 94);
+            label5.Name = "label5";
+            label5.Size = new Size(13, 15);
+            label5.TabIndex = 24;
+            label5.Text = "2";
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Location = new Point(98, 165);
+            label6.Name = "label6";
+            label6.Size = new Size(13, 15);
+            label6.TabIndex = 25;
+            label6.Text = "3";
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Location = new Point(200, 144);
+            label7.Name = "label7";
+            label7.Size = new Size(13, 15);
+            label7.TabIndex = 26;
+            label7.Text = "2";
+>>>>>>> 497ed2f (adding config)
             // 
             // Form1
             // 
@@ -500,10 +535,13 @@
         private Label label7;
         private Label label6;
         private Label label5;
+<<<<<<< HEAD
         private Label label8;
         private PictureBox picture;
         private Button btn_siguiente;
         private Label lbl_llenas;
         private Label label10;
+=======
+>>>>>>> 497ed2f (adding config)
     }
 }

@@ -47,10 +47,18 @@ namespace Crucigrama
             this.seleccionarImagen(pic_2, 2);
         }
 
+
+
         private void btn_guardar_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
             this.j1.nombre = txt_j1.Text;
             this.j2.nombre = txt_j2.Text;
+=======
+
+            this.j1 = new Jugador(txt_j1.Text, pic_1.ImageLocation);
+            this.j2 = new Jugador(txt_j2.Text, pic_2.ImageLocation);
+>>>>>>> 497ed2f (adding config)
             MessageBox.Show("Configuracion Guardada!");
             this.Close();
         }

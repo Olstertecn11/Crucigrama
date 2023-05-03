@@ -1,6 +1,9 @@
 using Newtonsoft.Json;
+<<<<<<< HEAD
 using System.Runtime.CompilerServices;
 using System.Security.Policy;
+=======
+>>>>>>> 497ed2f (adding config)
 
 namespace Crucigrama
 {
@@ -41,6 +44,7 @@ namespace Crucigrama
         public void configurar()
         {
             Config myConf = this.readJson();
+<<<<<<< HEAD
 
             if (myConf != null)
             {
@@ -54,10 +58,22 @@ namespace Crucigrama
                         if (pal.id == Convert.ToInt32(vert.id))
                         {
                             pal.texto = vert.val;
+=======
+            if(myConf!= null)
+            {
+                foreach(Vertical vert in myConf.verticales)
+                {
+                    foreach(Palabra palabra in palabras)
+                    {
+                        if(palabra.id == Convert.ToInt32(vert.id))
+                        {
+                            palabra.texto = vert.val;
+>>>>>>> 497ed2f (adding config)
                         }
                     }
                 }
 
+<<<<<<< HEAD
                 foreach (Horizontal hori in myConf.horizontales)
                 {
                     foreach (Palabra pal in p_h)
@@ -65,14 +81,26 @@ namespace Crucigrama
                         if (pal.id == Convert.ToInt32(hori.id))
                         {
                             pal.texto = hori.val;
+=======
+                foreach(Horizontal hori in myConf.horizontales)
+                {
+                    foreach(Palabra palabra in palabras)
+                    {
+                        if(palabra.id == Convert.ToInt32(hori.id))
+                        {
+                            palabra.texto = hori.val;
+>>>>>>> 497ed2f (adding config)
                         }
                     }
                 }
             }
+<<<<<<< HEAD
             else
             {
                 MessageBox.Show("Null");
             }
+=======
+>>>>>>> 497ed2f (adding config)
         }
 
         Config readJson()
@@ -91,7 +119,10 @@ namespace Crucigrama
             this.palabras.Add(new Palabra(1, "h", "rana", new List<TextBox> { txt1, txt2, txt3, txt4 }));
             this.palabras.Add(new Palabra(1, "v", "aguila", new List<TextBox> { txt2, txt5, txt6, txt7, txt8, txt9 }));
             this.palabras.Add(new Palabra(2, "h", "buitre", new List<TextBox> { txt10, txt6, txt11, txt12, txt13, txt14 }));
+<<<<<<< HEAD
             this.palabras.Add(new Palabra(2, "v", "babosa", new List<TextBox> { txt17, txt18, txt19, txt20, txt21, txt22 }));
+=======
+>>>>>>> 497ed2f (adding config)
         }
 
 
