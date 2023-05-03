@@ -14,6 +14,7 @@ namespace Crucigrama
     {
         public Jugador jugador1;
         public Jugador jugador2;
+        public Tabla tabla;
         public Menu()
         {
             this.jugador1 = new Jugador("", "");
@@ -24,7 +25,7 @@ namespace Crucigrama
         private void btn_partida_Click(object sender, EventArgs e)
         {
             this.Visible = false;
-            Form1 partida = new Form1(jugador1, jugador2);
+            Form1 partida = new Form1(jugador1, jugador2, tabla);
             partida.ShowDialog();
             this.Visible = true;
         }

@@ -1,17 +1,22 @@
 using Newtonsoft.Json;
 using System.Runtime.CompilerServices;
+using System.Security.Policy;
 
 namespace Crucigrama
 {
     public partial class Form1 : Form
     {
         public List<Palabra> palabras = new List<Palabra>();
+        public int contador_turnos;
         public int correctas;
         public Boolean turno = true;
         public Jugador j1, j2;
+        public Tabla tabla;
         int segundos = 0;
-        public Form1(Jugador jug1, Jugador jug2)
+        public Form1(Jugador jug1, Jugador jug2, Tabla tabl)
         {
+            this.contador_turnos = 0;
+            this.tabla = tabl;
             this.j1 = jug1;
             this.j2 = jug2;
             InitializeComponent();
@@ -103,6 +108,7 @@ namespace Crucigrama
                 lbl_turno.Text = j2.nombre;
                 picture.Image = Image.FromFile(j2.imagen);
             }
+            lbl_llenas.Text = this.contador_turnos.ToString();
         }
         public void analizar()
         {
@@ -140,6 +146,7 @@ namespace Crucigrama
             {
                 MessageBox.Show("tiempo acabado...");
                 this.turno = !this.turno;
+                this.contador_turnos++;
                 this.escribirCorrectas();
             }
             lbl_tiempo.Text = this.segundos.ToString();
@@ -148,6 +155,7 @@ namespace Crucigrama
         private void btn_siguiente_Click(object sender, EventArgs e)
         {
             this.turno = !this.turno;
+            this.contador_turnos++;
             this.escribirCorrectas();
         }
     }

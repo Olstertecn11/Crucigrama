@@ -66,6 +66,8 @@
             label8 = new Label();
             picture = new PictureBox();
             btn_siguiente = new Button();
+            lbl_llenas = new Label();
+            label10 = new Label();
             panel_contenedor.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)picture).BeginInit();
             SuspendLayout();
@@ -417,11 +419,33 @@
             btn_siguiente.UseVisualStyleBackColor = false;
             btn_siguiente.Click += btn_siguiente_Click;
             // 
+            // lbl_llenas
+            // 
+            lbl_llenas.AutoSize = true;
+            lbl_llenas.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            lbl_llenas.Location = new Point(746, 338);
+            lbl_llenas.Name = "lbl_llenas";
+            lbl_llenas.Size = new Size(15, 17);
+            lbl_llenas.TabIndex = 34;
+            lbl_llenas.Text = "0";
+            // 
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            label10.Location = new Point(667, 338);
+            label10.Name = "label10";
+            label10.Size = new Size(51, 17);
+            label10.TabIndex = 33;
+            label10.Text = "Llenas:";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(928, 449);
+            Controls.Add(lbl_llenas);
+            Controls.Add(label10);
             Controls.Add(btn_siguiente);
             Controls.Add(picture);
             Controls.Add(label8);
@@ -479,5 +503,7 @@
         private Label label8;
         private PictureBox picture;
         private Button btn_siguiente;
+        private Label lbl_llenas;
+        private Label label10;
     }
 }
